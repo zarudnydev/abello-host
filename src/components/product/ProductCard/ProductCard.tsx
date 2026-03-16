@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import { Product } from '@/types/product'
-import Button from '@/components/ui/Button/Button'
-import styles from './ProductCard.module.scss'
-import AuthGuard from '@/components/auth/AuthGuard/AuthGuard'
+import Image from 'next/image';
+import { Product } from '@/types/product';
+import Button from '@/components/ui/Button/Button';
+import styles from './ProductCard.module.scss';
+import AuthGuard from '@/components/auth/AuthGuard/AuthGuard';
 
 interface ProductCardProps {
-  product: Product
+  product: Product;
 }
 
 export default function ProductCard(props: ProductCardProps) {
-  const { product } = props
+  const { product } = props;
 
   return (
     <div className={styles.card}>
@@ -31,5 +31,5 @@ export default function ProductCard(props: ProductCardProps) {
         </AuthGuard>
       </div>
     </div>
-  )
+  );
 }

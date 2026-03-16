@@ -1,6 +1,8 @@
-import type { NextConfig } from 'next'
+import { API_URL } from '@/services/api';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   images: {
     domains: ['cdn.dummyjson.com'],
   },
@@ -9,12 +11,11 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         {
           source: '/api/:path*',
-          destination: 'https://dummyjson.com/:path*',
+          destination: `${API_URL}/:path*`,
         },
       ],
-    }
+    };
   },
-  reactStrictMode: false,
-}
+};
 
-export default nextConfig
+export default nextConfig;

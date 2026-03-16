@@ -1,17 +1,17 @@
-'use client'
+'use client';
 
-import { useProductsStore } from '@/stores/productsStore'
-import { useEffect } from 'react'
-import ProductCard from '../ProductCard/ProductCard'
-import styles from './ProductList.module.scss'
-import Loader from '@/components/ui/Loader/Loader'
+import { useProductsStore } from '@/stores/productsStore';
+import { useEffect } from 'react';
+import ProductCard from '../ProductCard/ProductCard';
+import styles from './ProductList.module.scss';
+import Loader from '@/components/ui/Loader/Loader';
 
 export default function ProductList() {
-  const { products, isLoading, error, fetchProducts } = useProductsStore()
+  const { products, isLoading, error, fetchProducts } = useProductsStore();
 
   useEffect(() => {
-    fetchProducts()
-  }, [fetchProducts])
+    fetchProducts();
+  }, [fetchProducts]);
 
   if (isLoading)
     return (
@@ -20,14 +20,14 @@ export default function ProductList() {
           <Loader />
         </div>
       </div>
-    )
+    );
 
   if (error)
     return (
       <div className={styles.container}>
         <div className={styles.error}>{error}</div>
       </div>
-    )
+    );
 
   return (
     <div className={styles.container}>
@@ -37,5 +37,5 @@ export default function ProductList() {
         ))}
       </div>
     </div>
-  )
+  );
 }

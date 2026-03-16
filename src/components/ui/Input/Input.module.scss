@@ -9,26 +9,26 @@
 }
 
 .label {
+  color: #4a5568;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #4a5568;
+  gap: 0.25rem;
   width: 100%;
 }
 
 .input {
-  padding: 0.75rem;
   border: 2px solid #e2e8f0;
   border-radius: 5px;
   font-size: 1rem;
+  padding: 0.75rem;
   transition: all 0.2s ease;
   width: 100%;
 
   &:focus {
-    outline: none;
     border-color: #667eea;
+    outline: none;
   }
 
   &::placeholder {
@@ -50,7 +50,7 @@
 }
 
 .errorMessage {
-  font-size: 0.75rem;
   color: #ef4444;
+  font-size: 0.75rem;
   margin-top: 0.25rem;
 }

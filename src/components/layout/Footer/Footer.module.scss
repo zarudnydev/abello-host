@@ -5,8 +5,8 @@
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 1.5rem 20px;
   text-align: center;
 }
@@ -16,11 +16,11 @@
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .container {
     padding: 1rem 20px;
   }
-  
+
   .container p {
     font-size: 0.75rem;
   }

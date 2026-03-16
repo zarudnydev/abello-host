@@ -1,22 +1,22 @@
-'use client'
+'use client';
 
-import Loader from '@/components/ui/Loader/Loader'
-import { useUserStore } from '@/stores/userStore'
-import { ReactNode, useEffect } from 'react'
+import Loader from '@/components/ui/Loader/Loader';
+import { useUserStore } from '@/stores/userStore';
+import { ReactNode, useEffect } from 'react';
 
 interface AuthProvider {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export default function AuthProvider(props: AuthProvider) {
-  const { children } = props
-  const { getSession, isLoading } = useUserStore()
+  const { children } = props;
+  const { getSession, isLoading } = useUserStore();
 
   useEffect(() => {
-    getSession()
-  }, [getSession])
+    getSession();
+  }, [getSession]);
 
-  if (isLoading) return <Loader />
+  if (isLoading) return <Loader />;
 
-  return <>{children}</>
+  return <>{children}</>;
 }

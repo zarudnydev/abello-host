@@ -1,10 +1,10 @@
-import { InputHTMLAttributes, forwardRef } from 'react'
-import styles from './Input.module.scss'
+import { InputHTMLAttributes, forwardRef } from 'react';
+import styles from './Input.module.scss';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string
-  error?: string
-  fullWidth?: boolean
+  label?: string;
+  error?: string;
+  fullWidth?: boolean;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -38,10 +38,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         )}
         {error && <span className={styles.errorMessage}>{error}</span>}
       </div>
-    )
-  },
-)
+    );
+  }
+);
 
-Input.displayName = 'Input'
+Input.displayName = 'Input';
 
-export default Input
+export default Input;

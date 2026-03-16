@@ -1,11 +1,11 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react'
-import styles from './Button.module.scss'
+import { ButtonHTMLAttributes, ReactNode } from 'react';
+import styles from './Button.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode
-  variant?: 'primary' | 'secondary' | 'danger'
-  fullWidth?: boolean
-  isLoading?: boolean
+  children: ReactNode;
+  variant?: 'primary' | 'secondary' | 'danger';
+  fullWidth?: boolean;
+  isLoading?: boolean;
 }
 
 export default function Button({
@@ -38,5 +38,5 @@ export default function Button({
         children
       )}
     </button>
-  )
+  );
 }

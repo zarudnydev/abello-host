@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import { useAuth } from '@/hooks/useAuth'
-import styles from './Footer.module.scss'
-import { getCurrentYear } from '@/utils/date'
+import { useAuth } from '@/hooks/useAuth';
+import styles from './Footer.module.scss';
+import { getCurrentYear } from '@/utils/date';
 
 export default function Footer() {
-  const { user, isAuthenticated } = useAuth()
-  const currentYear = getCurrentYear()
+  const { user, isAuthenticated } = useAuth();
+  const currentYear = getCurrentYear();
 
   return (
     <footer className={styles.footer}>
@@ -17,5 +17,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%; 
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -25,6 +25,6 @@ a {
 .layout {
   display: flex;
   flex-direction: column;
-  height: 100vh;    
-  overflow: hidden;       
+  height: 100vh;
+  overflow: hidden;
 }
